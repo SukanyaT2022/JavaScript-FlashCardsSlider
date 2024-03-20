@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="load()">
+  <p id="targetPtagID"></p>  
+
+
+<button onclick="nextBtn()">Next</button>
+<button onclick="prevBtn()">Previous</button>
+<a href="index.html">Back to home page</a>
+<script>
+
+mapsArray = [
+    " start--Variable: storage location where values are stored", 
+    "decision making using if-ifelse, if elif",
+    "lDiscover What's Most Important When Preparing For & Participating In Technical Interviews!",
+    "Explore top JavaScript Questions, Improve your skills and explore new questions. Get...",
+    "Apr 11, 2022 — Study with Quizlet and memorize flashcards containing terms like What's a",
+    "Apr 12, 2022 — Study with Quizlet and memorize flashcards containing terms like What's a",
+    "Apr 13, 2022 — Study with Quizlet and memorize flashcards containing terms like What's a",
+    "Apr 14, 2022 — Study with Quizlet and memorize flashcards containing terms like What's a",
+    "Apr 15, 2022 — Study with Quizlet and memorize flashcards containing terms like What's a",
+    "end--Apr 16, 2022 — Study with Quizlet and memorize flashcards containing terms like What's a",
+]
+var i = 0
+function load(){
+    document.getElementById('targetPtagID').innerText = mapsArray[i]
+
+}
+//  next function for array
+
+function nextBtn() {
+  i = i + 1;
+  i = i % mapsArray.length;// when reach to the end so it bring back to the first value
+load()
+
+}
+function prevBtn() {
+  if (i === 0) {
+    i = mapsArray.length;
+  }
+  i = i - 1;
+load()
+}
+
+</script>
+</body>
+</html>
