@@ -13,6 +13,8 @@ var arrAllQandA = [
 ["Question6", "optionOne", "optionTwo", "optionThree","optionFour", "optionThree"]
 ]
 
+
+
 //two dimension array
 //while loop use when when we donot know how many question
 //for loop we know exactly how many questions
@@ -86,8 +88,27 @@ var storeTextNoteNext2RadioButton = document.createTextNode(arrAllQandA[i][4])
 document.getElementById('showRadioButton').appendChild(storeTextNoteNext2RadioButton)
 //end input radio button
 
-
-
     }
+
+//create button
+var storeSubmitButton = document.createElement('button')
+storeSubmitButton.setAttribute('onclick', 'submit()')// 'onclick', 'submit()'-> attribute and value
+var submitTextNote = document.createTextNode('Submit')//text submit in the button
+storeSubmitButton.appendChild(submitTextNote)// this line we put submit word in the button 
+storeSubmitButton.setAttribute('id', 'targetSubmitButton')// target submit button for css
+//put button on html page
+document.getElementById('SubmitButtonSection').appendChild(storeSubmitButton)
+}
+
+function submit(){
+    //check fecth value if it correct--how many correct answer
+    var score = 0
+for(i=0 ;i <arrAllQandA.length; i++){
+    //check which option been selected
+    
+    var radioButtonName = 
+    if()
+
+}
 
 }
